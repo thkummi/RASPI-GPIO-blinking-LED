@@ -13,9 +13,7 @@ sudo chmod 660 /sys/class/gpio/gpio4/value
 
 int main () {
 
-
-
-   while(1) {
+        while(1) {
         FILE *ptr;
         ptr = fopen ("/sys/class/gpio/gpio4/value", "w");
         fprintf(ptr, "1");
@@ -26,7 +24,6 @@ int main () {
         fclose(ptr);
         sleep(1);
    }
-   /* wird nie erreicht */
+   /* never reach this */
    return 0;
 }
-
