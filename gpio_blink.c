@@ -18,11 +18,11 @@ int main () {
         ptr = fopen ("/sys/class/gpio/gpio4/value", "w");
         fprintf(ptr, "1");
         fclose(ptr);
-        sleep(1);
+        usleep(500000);                 //wait for x microseconds
         ptr = fopen ("/sys/class/gpio/gpio4/value", "w");
         fprintf(ptr, "0");
         fclose(ptr);
-        sleep(1);
+        usleep(500000);
    }
    /* never reach this */
    return 0;
